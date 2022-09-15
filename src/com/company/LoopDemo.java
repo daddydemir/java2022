@@ -15,5 +15,13 @@ public class LoopDemo {
             i+=2;
         }
         System.out.println("While Döngüsü Bitti");
+
+        int j = 2;
+        do {
+            System.out.println(j);
+            j+=2;
+        }while (j < 10);
+
+        System.out.println("Do-While Döngüsü Bitti");
     }
 }

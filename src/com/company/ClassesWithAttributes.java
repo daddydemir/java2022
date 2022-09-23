@@ -3,13 +3,13 @@ package com.company;
 public class ClassesWithAttributes {
     public static void main(String[] args) {
         Product product = new Product();
-        product.name = "Laptop";
-        product.id = 1;
-        product.description = "Asus";
-        product.price = 5000;
-        product.stockAmount = 3;
-        product.renk = "";
-        System.out.println(product.name);
+        product.setName("Laptop");
+        product.setId(1);
+        product.setDescription("Asus");
+        product.setPrice(5000);
+        product.setStockAmount(3);
+
+        System.out.println(product.getKod());
 
         ProductManager productManager = new ProductManager();
         productManager.Add(product);
@@ -30,11 +30,65 @@ class Product{
     private int stockAmount;
     private String renk;
     private String kod;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getStockAmount() {
+        return stockAmount;
+    }
+
+    public void setStockAmount(int stockAmount) {
+        this.stockAmount = stockAmount;
+    }
+
+    public String getRenk() {
+        return renk;
+    }
+
+    public void setRenk(String renk) {
+        this.renk = renk;
+    }
+
+    public String getKod() {
+        return this.name.substring(0,1) + this.id;
+    }
+
+
 }
 
 class ProductManager{
     public void Add(Product product){
-        System.out.println("Ürin eklendi: " + product.name);
+        System.out.println("Ürin eklendi: " + product.getName());
     }
 
     public void Add2(int id, String name, String description, int stockAmount, double price, String yeniOzellik){}

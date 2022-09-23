@@ -7,7 +7,7 @@ public class Inheritance {
 
         EmployeeManager employeeManager = new EmployeeManager();
         customerManager CustomerManager = new customerManager();
-        
+
     }
 }
 

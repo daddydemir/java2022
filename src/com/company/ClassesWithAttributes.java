@@ -2,7 +2,7 @@ package com.company;
 
 public class ClassesWithAttributes {
     public static void main(String[] args) {
-        Product product = new Product();
+        Product product = new Product(1,"Laptop","Asus",5000,3,"color","");
         product.setName("Laptop");
         product.setId(1);
         product.setDescription("Asus");
@@ -30,6 +30,20 @@ class Product{
     private int stockAmount;
     private String renk;
     private String kod;
+
+    public Product(int id, String name, String description, double price, int stockAmount, String renk, String kod) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stockAmount = stockAmount;
+        this.renk = renk;
+        this.kod = kod;
+    }
+
+    public Product(){
+        System.out.println("Product çalıştı");
+    }
 
     public int getId() {
         return id;
